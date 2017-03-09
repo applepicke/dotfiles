@@ -1,5 +1,6 @@
 set number 
 set relativenumber
+set mouse=nicr
 syntax on
 filetype plugin indent on
 
