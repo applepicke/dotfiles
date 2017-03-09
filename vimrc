@@ -73,14 +73,15 @@ map <Leader>2 :NERDTreeFind
 map <C-]> :UndotreeToggle <CR>
 
 " WINDOW SPLITTING
-noremap <Leader>l :split <cr>
 noremap <Leader>h :split <cr>
-noremap <Leader>k :vsplit <cr>
-noremap <Leader>j :vsplit <cr>
+noremap <Leader>v :vsplit <cr>
 
 map <C-n> :bn <CR>
 map <C-b> :bp <CR>
 map <C-d> :bd <CR>
+
+inoremap <C-E> <End>
+inoremap <C-A> <Home>
 
 "change where vim stores backup and swap files
 ""set backupdir=~/.vim/backup//
