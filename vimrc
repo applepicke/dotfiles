@@ -121,3 +121,4 @@ set list
 set listchars=tab:--,nbsp:.
 
 nnoremap ; :
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
