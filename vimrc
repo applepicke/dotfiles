@@ -1,4 +1,4 @@
-set number 
+set number
 set relativenumber
 set mouse=nicr
 syntax on
@@ -22,7 +22,7 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'Valloric/YouCompleteMe'
+" Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -50,12 +50,11 @@ map <Leader>. @:
 
 colorscheme busybee
 
-
 "###################################
 " FZF CONFIG
 " #################################
 map <C-p> :Files <CR>
-map <leader>fa :Ag <CR> 
+map <leader>fa :Ag <CR>
 map <leader>fg :GFiles <CR>
 map <leader>fb :Buffers <CR>
 map <leader>fl :Lines <CR>
@@ -82,8 +81,8 @@ map <C-n> :bn <CR>
 map <C-b> :bp <CR>
 map <C-d> :bd <CR>
 
-inoremap <C-E> <End>
-inoremap <C-A> <Home>
+inoremap <C-e> <End>
+inoremap <C-a> <Home>
 
 "change where vim stores backup and swap files
 ""set backupdir=~/.vim/backup//
@@ -91,8 +90,8 @@ set nobackup
 set noswapfile
 set undodir=~/.vim/undo//
 
-let g:gitgutter_realtime = 1
-let g:gitgutter_eager = 1
+"let g:gitgutter_realtime = 1
+"let g:gitgutter_eager = 1
 set updatetime=250
 
 set hidden " Prevent the need to save before changing buffers
@@ -110,3 +109,14 @@ set smarttab      " insert tabs on the start of a line according to
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set backspace=indent,eol,start
+
+" Redraw screen and remove search hightlighting
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+" Trim trailing whitespace
+autocmd BufWritePre * :%s/\s\+$//e
+
+set list
+set listchars=tab:--,nbsp:.
+
+nnoremap ; :
