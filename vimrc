@@ -78,8 +78,10 @@ map <C-]> :UndotreeToggle <CR>
 noremap <Leader>h :split <cr>
 noremap <Leader>v :vsplit <cr>
 
-map <C-n> :bn <CR>
-map <C-b> :bp <CR>
+noremap <C-g>  <cr>
+
+map <C-m> :bn <CR>
+map <C-n> :bp <CR>
 map <C-d> :bd <CR>
 
 inoremap <C-e> <End>
