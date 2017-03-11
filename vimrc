@@ -1,6 +1,5 @@
 set number
-set relativenumber
-set mouse=nicr
+"set relativenumber
 syntax on
 filetype plugin indent on
 
@@ -20,10 +19,11 @@ Plug 'xolox/vim-misc'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
+Plug 'scrooloose/nerdcommenter'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" Plug 'Valloric/YouCompleteMe'
+" plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -44,7 +44,7 @@ set history=10000
 set undolevels=10000
 
 " Highlight the line you are on
-set cursorline cursorcolumn
+set lazyredraw
 
 "MAPPINGS
 map <Leader>. @:
