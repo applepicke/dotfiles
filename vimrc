@@ -8,6 +8,18 @@ let mapleader = " "
 " PLUGINS
 call plug#begin()
 
+"language syntax plugins
+Plug 'pangloss/vim-javascript'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'othree/html5.vim'
+Plug 'tbastos/vim-lua'
+Plug 'hdima/python-syntax'
+Plug 'keith/tmux.vim'
+Plug 'isRuslan/vim-es6'
+Plug 'leafgarland/typescript-vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mitsuhiko/vim-jinja'
+
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sensible'
@@ -82,7 +94,7 @@ noremap <C-g>  <cr>
 
 map <C-m> :bn <CR>
 map <C-n> :bp <CR>
-map <C-d> :bd <CR>
+map <C-d> :bd! <CR>
 
 inoremap <C-e> <End>
 inoremap <C-a> <Home>
