@@ -25,7 +25,7 @@ Plug 'qpkorr/vim-bufkill'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-sleuth'
+"Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
@@ -64,7 +64,6 @@ set undofile
 set history=10000
 set undolevels=10000
 
-" Highlight the line you are on
 set lazyredraw
 
 "MAPPINGS
@@ -99,8 +98,6 @@ map <C-]> :UndotreeToggle <CR>
 noremap <Leader>h :split <cr>
 noremap <Leader>v :vsplit <cr>
 
-noremap <C-g>  <cr>
-
 map <C-m> :bn <CR>
 map <C-n> :bp <CR>
 map <C-d> :BD! <CR>
@@ -120,14 +117,6 @@ set updatetime=250
 
 set hidden " Prevent the need to save before changing buffers
 set nowrap        " don't wrap lines
-set tabstop=4     " a tab is four spaces
-set autoindent    " always set autoindenting on
-set copyindent    " copy the previous indentation on autoindenting
-set number        " always show line numbers
-set shiftwidth=4  " number of spaces to use for autoindenting
-set shiftround    " use multiple of shiftwidth when indenting with '<' and '>'
-set showmatch     " set show matching parenthesis
-set ignorecase    " ignore case when searching
 set smartcase     " ignore case if search pattern is all lowercase
 set smarttab      " insert tabs on the start of a line according to
 set hlsearch      " highlight search terms
@@ -146,10 +135,9 @@ set listchars=tab:--,nbsp:.
 nnoremap ; :
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Automatically read new files changes
-set autoread
-
-
 " Map q to close to prevent accidentally quitting
 cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'close' : 'q')<CR>
 
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
