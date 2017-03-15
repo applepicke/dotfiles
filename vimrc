@@ -1,5 +1,4 @@
 set number
-"set relativenumber
 syntax on
 filetype plugin indent on
 
@@ -146,6 +145,9 @@ set listchars=tab:--,nbsp:.
 
 nnoremap ; :
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+" Automatically read new files changes
+set autoread
 
 
 " Map q to close to prevent accidentally quitting
