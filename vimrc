@@ -19,7 +19,10 @@ Plug 'isRuslan/vim-es6'
 Plug 'leafgarland/typescript-vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mitsuhiko/vim-jinja'
+Plug 'mxw/vim-jsx'
+Plug 'jiangmiao/auto-pairs'
 
+Plug 'qpkorr/vim-bufkill'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sensible'
@@ -34,10 +37,17 @@ Plug 'scrooloose/nerdtree', { 'on': 'NERDTreeToggle' }
 Plug 'scrooloose/nerdcommenter'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' }
 Plug 'junegunn/fzf.vim'
 " plug 'Valloric/YouCompleteMe'
 
 call plug#end()
+
+" jinja highlighting
+au BufNewFile,BufRead *.jinja2 set ft=jinja
+
+" jsx highlighting for .js files
+let g:jsx_ext_required = 0
 
 "airline stuff
 let g:airline#extensions#tabline#enabled = 1
@@ -94,7 +104,7 @@ noremap <C-g>  <cr>
 
 map <C-m> :bn <CR>
 map <C-n> :bp <CR>
-map <C-d> :bd! <CR>
+map <C-d> :BD! <CR>
 
 inoremap <C-e> <End>
 inoremap <C-a> <Home>
@@ -136,3 +146,8 @@ set listchars=tab:--,nbsp:.
 
 nnoremap ; :
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+
+" Map q to close to prevent accidentally quitting
+cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'close' : 'q')<CR>
+
