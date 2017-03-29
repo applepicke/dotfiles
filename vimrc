@@ -26,7 +26,7 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-sensible'
 Plug 'Yggdroot/indentLine'
-"Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
@@ -98,11 +98,6 @@ map <Leader>2 :NERDTreeFind
 " WINDOW SPLITTING
 noremap <Leader>h :split <cr>
 noremap <Leader>v :vsplit <cr>
-
-noremap <C-)> :bn <CR>
-noremap <C-(> :bp <CR>
-noremap <C-d> :BD! <CR>
-
 map <Leader>p :set paste! <CR>
 
 inoremap <C-e> <End>
@@ -120,14 +115,14 @@ set updatetime=250
 
 set hidden " Prevent the need to save before changing buffers
 set nowrap        " don't wrap lines
-set tabstop=4
-set shiftwidth=4
+"set tabstop=4
+"set shiftwidth=4
 set smartcase     " ignore case if search pattern is all lowercase
 set smarttab      " insert tabs on the start of a line according to
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set backspace=indent,eol,start
-set expandtab
+"set expandtab
 
 " Trim trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
@@ -146,4 +141,8 @@ let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
 
 let g:indentLine_color_term = 239
+
+noremap <leader>m :bn <CR>
+noremap <leader>n :bp <CR>
+noremap <C-d> :BD! <CR>
 
