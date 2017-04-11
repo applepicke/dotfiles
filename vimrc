@@ -21,6 +21,9 @@ Plug 'mitsuhiko/vim-jinja'
 Plug 'mxw/vim-jsx'
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
+
 Plug 'qpkorr/vim-bufkill'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
