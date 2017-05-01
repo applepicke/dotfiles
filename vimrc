@@ -1,4 +1,5 @@
 set number
+set relativenumber
 syntax on
 filetype plugin indent on
 
@@ -19,10 +20,12 @@ Plug 'leafgarland/typescript-vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'mxw/vim-jsx'
-Plug 'jiangmiao/auto-pairs'
+Plug 'rust-lang/rust.vim'
+Plug 'chrisbra/csv.vim'
 
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
+Plug 'jiangmiao/auto-pairs'
 
 Plug 'qpkorr/vim-bufkill'
 Plug 'bling/vim-airline'
