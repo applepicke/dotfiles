@@ -1,5 +1,4 @@
 set number
-set relativenumber
 syntax on
 filetype plugin indent on
 
@@ -21,7 +20,13 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
+Plug 'fatih/vim-go'
 Plug 'chrisbra/csv.vim'
+Plug 'cespare/vim-toml'
+Plug 'kshenoy/vim-signature'
+Plug 'vim-perl/vim-perl'
+Plug 'beyondmarc/opengl.vim'
+Plug 'beyondmarc/glsl.vim'
 
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -77,7 +82,6 @@ set lazyredraw
 map <Leader>. @:
 
 colorscheme busybee
-
 "###################################
 " FZF CONFIG
 " #################################
