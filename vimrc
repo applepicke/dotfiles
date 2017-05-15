@@ -50,7 +50,6 @@ Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' }
 Plug 'junegunn/fzf.vim'
-" plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -156,3 +155,5 @@ noremap <leader>m :bn <CR>
 noremap <leader>n :bp <CR>
 noremap <C-d> :BD! <CR>
 
+" Disable dumb folding
+set nofoldenable

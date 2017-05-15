@@ -26,7 +26,7 @@ ZSH_THEME="pure"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+export DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -92,6 +92,7 @@ ssh-add ~/.ssh/gh_id_rsa &>/dev/null
 alias reload="source ~/.zshrc"
 alias -s html='chrome'
 alias vag="mosh vagrant@192.168.56.102"
+unalias gm
 
 chruby 2.3.3
 workon 3.6
