@@ -26,7 +26,7 @@ ZSH_THEME="pure"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-export DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -82,6 +82,9 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zconf="vim ~/.zshrc"
+
+eval "$(pyenv init -)"
+export VIRTUALENVWRAPPER_PYTHON=/Users/williamc/.pyenv/versions/2.7.9/bin/python
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/bin/virtualenvwrapper.sh
