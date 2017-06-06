@@ -1,6 +1,7 @@
 set number
 syntax on
 filetype plugin indent on
+set clipboard^=unnamed
 
 let mapleader = " "
 
@@ -157,3 +158,10 @@ noremap <C-d> :BD! <CR>
 
 " Disable dumb folding
 set nofoldenable
+
+nnoremap ∆ :m .+1<CR>==
+nnoremap ˚ :m .-2<CR>==
+inoremap ∆ <Esc>:m .+1<CR>==gi
+inoremap ˚ <Esc>:m .-2<CR>==gi
+vnoremap ∆ :m '>+1<CR>gv=gv
+vnoremap ˚ :m '<-2<CR>gv=gv
