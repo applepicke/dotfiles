@@ -64,6 +64,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' }
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
+Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
 
@@ -178,6 +179,22 @@ let g:ale_fixers = {
 \ 'python': ['flake8'],
 \ 'ruby': ['brakeman']
 \}
+let g:ale_completion_enabled = 0
+let g:ale_lint_on_enter = 0
+let g:ale_lint_on_text_changed = 'never'
+
+" YouCompleteMe
+let g:ycm_auto_trigger = 0
+
+function! ToggleCompletion()
+  if g:ycm_auto_trigger==1
+    let g:ycm_auto_trigger=0
+  else
+    let g:ycm_auto_trigger=1
+  endif
+endfunction
+
+noremap <leader>co :silent exec ":call ToggleCompletion()" <CR>
 
 " shortcut to edit vimrc
 :command Vimrc e ~/.vimrc
