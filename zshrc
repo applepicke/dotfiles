@@ -1,5 +1,5 @@
 # If you come from bash you might have to change your $PATH.
-    # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/williamc/.oh-my-zsh
@@ -82,9 +82,6 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zconf="vim ~/.zshrc"
-
-eval "$(pyenv init -)"
-export VIRTUALENVWRAPPER_PYTHON=/Users/williamc/.pyenv/versions/2.7.9/bin/python
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/local/bin/virtualenvwrapper.sh
