@@ -1,0 +1,6 @@
+[user]
+	name = William Collins
+	email = williamc@surveymonkey.com
+[alias]
+	change-commits = "!f() { VAR=$1; OLD=$2; NEW=$3; shift 3; git filter-branch --env-filter \"if [[ \\\"$`echo $VAR`\\\" = '$OLD' ]]; then export $VAR='$NEW'; fi\" $@; }; f "
+	changelog = "!f() { git log \"$(git describe --tags $(git rev-list --tags --max-count=1))\"..HEAD --oneline; }; f "

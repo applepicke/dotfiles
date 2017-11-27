@@ -4,16 +4,6 @@ filetype plugin indent on
 
 let mapleader = " "
 
-set hidden " Prevent the need to save before changing buffers
-set nowrap        " don't wrap lines
-set smartcase     " ignore case if search pattern is all lowercase
-set smarttab      " insert tabs on the start of a line according to
-set hlsearch      " highlight search terms
-set incsearch     " show search matches as you type
-set backspace=indent,eol,start
-set tabstop=2
-"set expandtab
-
 " Remove pesky python pep8
 let g:python_recommended_style=0
 
@@ -26,9 +16,8 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'tpope/vim-haml'
 Plug 'othree/html5.vim'
 Plug 'tbastos/vim-lua'
-Plug 'hdima/python-syntax'
 Plug 'keith/tmux.vim'
-Plug 'leafgarland/typescript-vim'
+"Plug 'leafgarland/typescript-vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'mxw/vim-jsx'
@@ -77,8 +66,9 @@ au BufNewFile,BufRead *.jinja2 set ft=jinja
 " jsx highlighting for .js files
 let g:jsx_ext_required = 0
 
-"airline stuff
+" airline stuff
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#whitespace#enabled = 0
 let g:airline_powerline_fonts = 1
 let g:airline_theme='jellybeans'
 if !exists('g:airline_symbols')
@@ -118,6 +108,8 @@ map <Leader>2 :NERDTreeFind
 " WINDOW SPLITTING
 noremap <Leader>h :split <cr>
 noremap <Leader>v :vsplit <cr>
+
+" enable paste mode
 map <Leader>p :set paste! <CR>
 
 " emacs style beginning and end of line
@@ -130,10 +122,6 @@ set nobackup
 set noswapfile
 set undodir=~/.vim/undo//
 
-"let g:gitgutter_realtime = 1
-"let g:gitgutter_eager = 1
-set updatetime=250
-
 " Trim trailing whitespace
 autocmd BufWritePre * :%s/\s\+$//e
 
@@ -141,11 +129,12 @@ autocmd BufWritePre * :%s/\s\+$//e
 set list
 set listchars=tab:--,nbsp:.
 
+" semicolon is better than colon
 nnoremap ; :
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 " Map q to close to prevent accidentally quitting
-cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'close' : 'q')<CR>
+" cabbrev q <c-r>=(getcmdtype()==':' && getcmdpos()==1 ? 'close' : 'q')<CR>
 
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
@@ -199,3 +188,21 @@ noremap <leader>co :silent exec ":call ToggleCompletion()" <CR>
 " shortcut to edit vimrc
 :command Vimrc e ~/.vimrc
 map <C-e> :Vimrc <CR>
+
+
+" Set common items last to overwrite and plugin changes
+set hidden " Prevent the need to save before changing buffers
+set nowrap        " don't wrap lines
+set smartcase     " ignore case if search pattern is all lowercase
+set smarttab      " insert tabs on the start of a line according to
+set hlsearch      " highlight search terms
+set incsearch     " show search matches as you type
+set backspace=indent,eol,start
+set tabstop=2
+set nocursorcolumn
+set nocursorline
+set norelativenumber
+
+set synmaxcol=200
+autocmd BufEnter * :syn sync maxlines=200
+"syntax sync minlines=200
