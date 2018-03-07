@@ -51,7 +51,7 @@ ZSH_THEME="pure"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ruby chruby docker sudo tmuxinator)
+plugins=(git ruby chruby docker sudo tmuxinator extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -112,6 +112,8 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 export PATH="$PATH:./node_modules/.bin"
 export GOPATH="$HOME/go"
 export PATH=${PATH}:${GOPATH}/bin
+export PATH="/usr/local/sbin:$PATH"
+
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

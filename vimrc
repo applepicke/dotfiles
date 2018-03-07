@@ -2,9 +2,13 @@ set number
 syntax on
 filetype plugin indent on
 
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
 let mapleader = " "
 
-" Remove pesky python pep8
+" Remove  pesky python pep8
 let g:python_recommended_style=0
 
 " PLUGINS
@@ -13,22 +17,22 @@ call plug#begin()
 "language syntax plugins
 Plug 'pangloss/vim-javascript'
 Plug 'neovimhaskell/haskell-vim'
-Plug 'tpope/vim-haml'
-Plug 'othree/html5.vim'
+"Plug 'othree/html5.vim'
 Plug 'tbastos/vim-lua'
 Plug 'keith/tmux.vim'
 "Plug 'leafgarland/typescript-vim'
-Plug 'kchmck/vim-coffee-script'
+"Plug 'kchmck/vim-coffee-script'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go'
 Plug 'chrisbra/csv.vim'
-Plug 'cespare/vim-toml'
+"Plug 'cespare/vim-toml'
 Plug 'kshenoy/vim-signature'
-Plug 'vim-perl/vim-perl'
-Plug 'beyondmarc/opengl.vim'
-Plug 'beyondmarc/glsl.vim'
+"Plug 'vim-perl/vim-perl'
+"Plug 'beyondmarc/opengl.vim'
+"Plug 'beyondmarc/glsl.vim'
+Plug 'quabug/vim-gdscript'
 
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -54,6 +58,7 @@ Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' }
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'Valloric/YouCompleteMe'
+Plug 'tpope/vim-haml'
 
 call plug#end()
 
@@ -96,6 +101,8 @@ map <leader>fs :Snippets <CR>
 map <leader>fc :Commits <CR>
 map <leader>ff :BCommits <CR>
 map <leader>fm :MRUFilesCWD <CR>
+
+let FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
 "NERDTree
 let NERDTreeIgnore = ['\.pyc$']
@@ -189,6 +196,9 @@ noremap <leader>co :silent exec ":call ToggleCompletion()" <CR>
 :command Vimrc e ~/.vimrc
 map <C-e> :Vimrc <CR>
 
+" Copy to end of visual selection
+vmap <C-p> y'>p
+
 
 " Set common items last to overwrite and plugin changes
 set hidden " Prevent the need to save before changing buffers
@@ -198,11 +208,18 @@ set smarttab      " insert tabs on the start of a line according to
 set hlsearch      " highlight search terms
 set incsearch     " show search matches as you type
 set backspace=indent,eol,start
-set tabstop=2
 set nocursorcolumn
 set nocursorline
 set norelativenumber
-
 set synmaxcol=200
-autocmd BufEnter * :syn sync maxlines=200
-"syntax sync minlines=200
+
+" Run commands with output in a new buffer
+function! s:Run(cmd)
+  ene
+  redir => message
+    silent execute a:cmd
+  redir END
+  silent put=message
+endfunction
+command! -nargs=1 Run call s:Run(<f-args>)
+
