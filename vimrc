@@ -17,22 +17,16 @@ call plug#begin()
 "language syntax plugins
 Plug 'pangloss/vim-javascript'
 Plug 'neovimhaskell/haskell-vim'
-"Plug 'othree/html5.vim'
 Plug 'tbastos/vim-lua'
 Plug 'keith/tmux.vim'
-"Plug 'leafgarland/typescript-vim'
-"Plug 'kchmck/vim-coffee-script'
 Plug 'mitsuhiko/vim-jinja'
 Plug 'mxw/vim-jsx'
 Plug 'rust-lang/rust.vim'
 Plug 'fatih/vim-go'
 Plug 'chrisbra/csv.vim'
-"Plug 'cespare/vim-toml'
 Plug 'kshenoy/vim-signature'
-"Plug 'vim-perl/vim-perl'
-"Plug 'beyondmarc/opengl.vim'
-"Plug 'beyondmarc/glsl.vim'
 Plug 'quabug/vim-gdscript'
+Plug 'gko/vim-coloresque'
 
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
@@ -107,7 +101,7 @@ let FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 "NERDTree
 let NERDTreeIgnore = ['\.pyc$']
 let NERDTreeShowLineNumbers=1
-autocmd FileType nerdtree setlocal relativenumber
+"autocmd FileType nerdtree setlocal relativenumber
 let g:NERDTreeMapHelp = '<F1>'
 map <C-\> :NERDTreeToggle <CR>
 map <Leader>2 :NERDTreeFind

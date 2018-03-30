@@ -100,7 +100,7 @@ alias pip3="pip install -e . -i https://devpi.corp.surveymonkey.com/monkey/monke
 
 unalias gm
 
-chruby 2.3.3
+chruby 2.5.0
 workon 3.6
 
 source ~/.cargo/env
