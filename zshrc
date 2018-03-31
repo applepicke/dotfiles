@@ -84,8 +84,9 @@ source $ZSH/oh-my-zsh.sh
 alias zconf="vim ~/.zshrc"
 
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.bin/tmuxinator.zsh
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.6
 source /usr/local/bin/virtualenvwrapper.sh
 
 ssh-add ~/.ssh/id_rsa &>/dev/null
@@ -103,8 +104,6 @@ unalias gm
 chruby 2.5.0
 workon 3.6
 
-source ~/.cargo/env
-
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
@@ -114,12 +113,12 @@ export GOPATH="$HOME/go"
 export PATH=${PATH}:${GOPATH}/bin
 export PATH="/usr/local/sbin:$PATH"
 
+export EDITOR="vim"
+export BYOBU_PREFIX=/usr/local
+
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 RPROMPT='$(chruby_prompt_info)'
-
-cd ~/dev
-
 

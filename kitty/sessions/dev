@@ -1,0 +1,12 @@
+
+# Dev
+new_tab Dev
+launch tmuxinator start dev
+
+# Wufoo
+new_tab Wufoo
+launch tmuxinator start wufoo
+
+# WDS
+new_tab WDS
+launch tmuxinator start wds

@@ -51,7 +51,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'Chiel92/vim-autoformat', { 'on': 'Autoformat' }
 Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
-Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-haml'
 
 call plug#end()
@@ -206,6 +205,9 @@ set nocursorcolumn
 set nocursorline
 set norelativenumber
 set synmaxcol=200
+
+
+let &t_ut=''
 
 " Run commands with output in a new buffer
 function! s:Run(cmd)
