@@ -86,7 +86,7 @@ alias zconf="vim ~/.zshrc"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.bin/tmuxinator.zsh
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.6
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
 source /usr/local/bin/virtualenvwrapper.sh
 
 ssh-add ~/.ssh/id_rsa &>/dev/null
@@ -102,7 +102,6 @@ alias pip3="pip install -e . -i https://devpi.corp.surveymonkey.com/monkey/monke
 unalias gm
 
 chruby 2.5.0
-workon 3.6
 
 export ANDROID_HOME=${HOME}/Library/Android/sdk
 export PATH=${PATH}:${ANDROID_HOME}/tools

@@ -41,6 +41,7 @@ Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'flazz/vim-colorschemes'
 Plug 'xolox/vim-colorscheme-switcher'
+Plug 'jacoborus/tender.vim'
 Plug 'xolox/vim-misc'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
@@ -56,7 +57,7 @@ Plug 'tpope/vim-haml'
 call plug#end()
 
 " Change color scheme
-colorscheme busybee
+silent! colorscheme busybee
 
 " jinja highlighting
 au BufNewFile,BufRead *.jinja2 set ft=jinja
@@ -172,18 +173,9 @@ let g:ale_completion_enabled = 0
 let g:ale_lint_on_enter = 0
 let g:ale_lint_on_text_changed = 'never'
 
-" YouCompleteMe
-let g:ycm_auto_trigger = 0
-
-function! ToggleCompletion()
-  if g:ycm_auto_trigger==1
-    let g:ycm_auto_trigger=0
-  else
-    let g:ycm_auto_trigger=1
-  endif
-endfunction
-
-noremap <leader>co :silent exec ":call ToggleCompletion()" <CR>
+" Markdown
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal = 0
 
 " shortcut to edit vimrc
 :command Vimrc e ~/.vimrc
