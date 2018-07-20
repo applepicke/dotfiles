@@ -57,7 +57,7 @@ Plug 'tpope/vim-haml'
 call plug#end()
 
 " Change color scheme
-silent! colorscheme busybee
+silent colorscheme busybee
 
 " jinja highlighting
 au BufNewFile,BufRead *.jinja2 set ft=jinja
