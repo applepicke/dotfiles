@@ -7,7 +7,7 @@ export ZSH=/Users/williamc/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="pure"
+ZSH_THEME="willy"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -51,7 +51,7 @@ ZSH_THEME="pure"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ruby chruby docker sudo tmuxinator extract)
+plugins=(git docker sudo tmuxinator extract)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -101,12 +101,6 @@ alias pip3="pip install -e . -i https://devpi.corp.surveymonkey.com/monkey/monke
 
 unalias gm
 
-chruby 2.5.0
-
-export ANDROID_HOME=${HOME}/Library/Android/sdk
-export PATH=${PATH}:${ANDROID_HOME}/tools
-export PATH=${PATH}:${ANDROID_HOME}/platform-tools
-
 export PATH="$PATH:./node_modules/.bin"
 export GOPATH="$HOME/go"
 export PATH=${PATH}:${GOPATH}/bin
@@ -118,6 +112,4 @@ export BYOBU_PREFIX=/usr/local
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-RPROMPT='$(chruby_prompt_info)'
 

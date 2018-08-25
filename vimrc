@@ -86,6 +86,9 @@ set lazyredraw
 map <Leader>. @:
 
 " FZF
+" Don't search filenames with Ag
+command! -bang -nargs=* Ag call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+
 map <C-p> :Files <CR>
 map <leader>fa :Ag <CR>
 map <leader>fg :GFiles <CR>
