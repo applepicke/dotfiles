@@ -27,10 +27,12 @@ Plug 'chrisbra/csv.vim'
 Plug 'kshenoy/vim-signature'
 Plug 'quabug/vim-gdscript'
 Plug 'gko/vim-coloresque'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 Plug 'godlygeek/tabular'
 Plug 'plasticboy/vim-markdown'
 Plug 'jiangmiao/auto-pairs'
+Plug 'diepm/vim-rest-console'
 
 Plug 'qpkorr/vim-bufkill'
 Plug 'bling/vim-airline'
@@ -54,10 +56,12 @@ Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'tpope/vim-haml'
 
+Plug 'prettier/vim-prettier', { 'branch': 'release/1.x', 'for': ['javascript', 'json', 'markdown'] }
+
 call plug#end()
 
 " Change color scheme
-silent! colorscheme busybee
+silent! colorscheme bvemu
 
 " jinja highlighting
 au BufNewFile,BufRead *.jinja2 set ft=jinja
@@ -100,6 +104,10 @@ map <leader>ff :BCommits <CR>
 map <leader>fm :MRUFilesCWD <CR>
 
 let FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
+
+"Prettier
+nmap <Leader>py <Plug>(Prettier)
+let g:prettier#quickfix_enabled = 0
 
 "NERDTree
 let NERDTreeIgnore = ['\.pyc$']

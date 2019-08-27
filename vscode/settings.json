@@ -1,0 +1,19 @@
+{
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "CodeSandbox",
+    "files.trimTrailingWhitespace": true,
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [";"],
+            "after": [":"]
+        },
+    ],
+    "vim.handleKeys": {
+        "<C-j>": false
+    },
+    "editor.fontFamily": "Dank Mono ,Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 13,
+    "editor.fontLigatures": true,
+    "search.location": "panel",
+}

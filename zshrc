@@ -96,9 +96,6 @@ alias reload="source ~/.zshrc"
 alias -s html='chrome'
 alias vag="mosh vagrant@192.168.56.102"
 
-alias pip2="pip install -e . -i https://devpi.corp.surveymonkey.com/monkey/monkey -U"
-alias pip3="pip install -e . -i https://devpi.corp.surveymonkey.com/monkey/monkey -U --force-reinstall"
-
 unalias gm
 
 export PATH="$PATH:./node_modules/.bin"

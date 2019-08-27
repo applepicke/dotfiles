@@ -1,12 +1,12 @@
 
-# Dev
-new_tab Dev
-launch tmuxinator start dev-vim
-
-# Wufoo
-new_tab Wufoo
-launch tmuxinator start wufoo-vim
+# applepicke
+new_tab applepicke
+launch tmuxinator start applepicke-vim
 
 # WDS
-new_tab WDS
-launch tmuxinator start wds-vim
+new_tab ethicaltree
+launch tmuxinator start ethicaltree-vim
+
+# Wufoo
+new_tab wufoo
+launch tmuxinator start wufoo-vim

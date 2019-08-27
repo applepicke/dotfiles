@@ -1,12 +1,13 @@
 
 # Dev
-new_tab Dev
-launch tmuxinator start dev
+new_tab applepicke
+launch tmuxinator start applepicke
+
+# EthicalTree
+new_tab ethicaltree
+launch tmuxinator start ethicaltree
 
 # Wufoo
-new_tab Wufoo
+new_tab wufoo
 launch tmuxinator start wufoo
 
-# WDS
-new_tab WDS
-launch tmuxinator start wds
