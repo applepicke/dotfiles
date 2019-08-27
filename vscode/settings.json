@@ -1,6 +1,6 @@
 {
     "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "CodeSandbox",
+    "workbench.colorTheme": "One Dark Pro",
     "files.trimTrailingWhitespace": true,
     "vim.leader": "<space>",
     "vim.normalModeKeyBindingsNonRecursive": [
@@ -12,8 +12,16 @@
     "vim.handleKeys": {
         "<C-j>": false
     },
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
     "editor.fontFamily": "Dank Mono ,Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 13,
     "editor.fontLigatures": true,
     "search.location": "panel",
+    "workbench.editor.enablePreview": false,
+    "breadcrumbs.enabled": true,
+    "editor.minimap.enabled": false,
 }
