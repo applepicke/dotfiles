@@ -12,11 +12,8 @@
     "vim.handleKeys": {
         "<C-j>": false
     },
-    "editor.quickSuggestions": {
-        "other": false,
-        "comments": false,
-        "strings": false
-    },
+    "editor.quickSuggestions": false,
+    "editor.suggestOnTriggerCharacters": false,
     "editor.fontFamily": "Dank Mono ,Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 13,
     "editor.fontLigatures": true,
@@ -24,4 +21,7 @@
     "workbench.editor.enablePreview": false,
     "breadcrumbs.enabled": true,
     "editor.minimap.enabled": false,
+    "workbench.list.keyboardNavigation": "simple",
+    "editor.tabSize": 2,
+    "workbench.startupEditor": "none",
 }
