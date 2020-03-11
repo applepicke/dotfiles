@@ -17,11 +17,12 @@
     "editor.fontFamily": "Dank Mono ,Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 13,
     "editor.fontLigatures": true,
-    "search.location": "panel",
     "workbench.editor.enablePreview": false,
     "breadcrumbs.enabled": true,
     "editor.minimap.enabled": false,
     "workbench.list.keyboardNavigation": "simple",
     "editor.tabSize": 2,
     "workbench.startupEditor": "none",
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "javascript.updateImportsOnFileMove.enabled": "always",
 }

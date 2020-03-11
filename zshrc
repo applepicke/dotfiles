@@ -86,15 +86,13 @@ alias zconf="vim ~/.zshrc"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.bin/tmuxinator.zsh
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
 source /usr/local/bin/virtualenvwrapper.sh
 
 ssh-add ~/.ssh/id_rsa &>/dev/null
 ssh-add ~/.ssh/gh_id_rsa &>/dev/null
 
 alias reload="source ~/.zshrc"
-alias -s html='chrome'
-alias vag="mosh vagrant@192.168.56.102"
 
 unalias gm
 
