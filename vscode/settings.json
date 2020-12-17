@@ -25,4 +25,6 @@
     "workbench.startupEditor": "none",
     "terminal.integrated.shell.osx": "/bin/zsh",
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
 }

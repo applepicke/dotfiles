@@ -86,9 +86,6 @@ alias zconf="vim ~/.zshrc"
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.bin/tmuxinator.zsh
 
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python2.7
-source /usr/local/bin/virtualenvwrapper.sh
-
 ssh-add ~/.ssh/id_rsa &>/dev/null
 ssh-add ~/.ssh/gh_id_rsa &>/dev/null
 
